@@ -13,7 +13,7 @@ public class FileUtilities {
         System.out.println(x);
 
         String y = "Goodbye Moon";
-        // FileUtilities.writeFile(y, "\\StringFileSaver");
+        FileUtilities.writeFile(y, "example.txt");
     }
 
     public static String readFile(File fileName) throws IOException {
@@ -26,9 +26,9 @@ public class FileUtilities {
         return string.toString();
     }
 
-    public static void writeFile(String str, String path) throws FileNotFoundException {
+    public static void writeFile(String str, String documentName) throws FileNotFoundException {
         // creates a file from file path parameter
-        File file = new File(path);
+        File file = new File(documentName);
         PrintWriter pw = new PrintWriter(file);
         pw.write(str);
         pw.close();
